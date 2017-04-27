@@ -13,10 +13,6 @@ html {
       -ms-text-size-adjust: 100%;
 }
 
-footer,header,{
-  display: block;
-}
-
 a {
   background-color: transparent;
 }
