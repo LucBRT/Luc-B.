@@ -33,15 +33,3 @@ h1 {
   margin: .67em 0;
   font-size: 2em;
 }
-
-button,textarea {
-  margin: 0;
-  font: inherit;
-  color: inherit;
-}
-
-button {
-  overflow: visible;
-}
-  line-height: normal;
-}
