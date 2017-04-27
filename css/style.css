@@ -1,7 +1,8 @@
 body {
   padding-top: 50px;
 }
-.starter-template { 
+
+.description_interieur { 
   padding: 40px 15px;
   text-align: center;
 }
@@ -12,28 +13,10 @@ html {
       -ms-text-size-adjust: 100%;
 }
 
-
-
-footer,
-header,
-{
+footer,header,{
   display: block;
 }
-audio,
-canvas,
-progress,
-video {
-  display: inline-block;
-  vertical-align: baseline;
-}
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-[hidden],
-template {
-  display: none;
-}
+
 a {
   background-color: transparent;
 }
