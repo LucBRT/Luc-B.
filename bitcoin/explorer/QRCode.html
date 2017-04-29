@@ -32,23 +32,23 @@
 		
 		<div class=interieur>
 				<h1>Générateur de QRCode</h1>
-						<p> Voici le QRCode associé au mot "Bonjour" </p>
+						<p> Voici le QRCode associé au mot "Bonjour" <br/> </p>
 						<div id="qrcode"></div>
 						<script type="text/javascript">
 						var qrcode = new QRCode(document.getElementById("qrcode"), {
 							text: "Bonjour",
 							width: 256,
 							height: 256,
-							colorDark : "#000000",
+							colorDark : "#77B5FE",
 							colorLight : "#ffffff",
 							correctLevel : QRCode.CorrectLevel.H
 						});
 						</script>
 						
-						<p> Voici celui associé au mot "Adieu"</p>
+						<p> Voici celui associé au mot "Adieu" <br/> </p>
 						<div id="qrcode2"></div>
 						<script type="text/javascript">
-						new QRCode(document.getElementById("qrcode"), "http://jindo.dev.naver.com/collie");
+						new QRCode(document.getElementById("qrcode"), "Adieu");
 						</script>
 		</div>
 
