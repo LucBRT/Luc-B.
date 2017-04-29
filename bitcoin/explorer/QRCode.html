@@ -32,12 +32,12 @@
 		
 		<div class=interieur>
 				<h1>Générateur de QRCode</h1>
-						<div class=interieur id="qrcode"></div>
+						<div id="qrcode"></div>
 						<script type="text/javascript">
 						var qrcode = new QRCode(document.getElementById("qrcode"), {
 							text: "http://jindo.dev.naver.com/collie",
-							width: 128,
-							height: 128,
+							width: 256,
+							height: 256,
 							colorDark : "#000000",
 							colorLight : "#ffffff",
 							correctLevel : QRCode.CorrectLevel.H
