@@ -32,6 +32,7 @@
 		
 		<div class=interieur>
 				<h1>Générateur de QRCode</h1>
+					<div>
 						<p> Voici le QRCode associé au mot "Bonjour" <br/> </p>
 						<div id="qrcode"></div>
 						<script type="text/javascript">
@@ -44,12 +45,15 @@
 							correctLevel : QRCode.CorrectLevel.H
 						});
 						</script>
-						
+					</div>
+					<div>
 						<p> Voici celui associé au mot "Adieu" <br/> </p>
+			
 						<div id="qrcode2"></div>
 						<script type="text/javascript">
 						new QRCode(document.getElementById("qrcode"), "Adieu");
 						</script>
+					</div>
 		</div>
 
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
