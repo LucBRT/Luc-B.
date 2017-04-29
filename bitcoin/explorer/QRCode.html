@@ -31,9 +31,10 @@
 		</div>
 		
 		<div class=interieur>
+		
 				<h1>Générateur de QRCode</h1>
+				<p> Voici le QRCode associé au mot "Bonjour" <br/> </p>
 					<div>
-						<p> Voici le QRCode associé au mot "Bonjour" <br/> </p>
 						<div id="qrcode"></div>
 						<script type="text/javascript">
 						var qrcode = new QRCode(document.getElementById("qrcode"), {
@@ -46,9 +47,10 @@
 						});
 						</script>
 					</div>
-					<div>
-						<p> Voici celui associé au mot "Adieu" <br/> </p>
 			
+				<p> Voici celui associé au mot "Adieu" <br/> </p>
+			
+					<div>			
 						<div id="qrcode2"></div>
 						<script type="text/javascript">
 						new QRCode(document.getElementById("qrcode"), "Adieu");
