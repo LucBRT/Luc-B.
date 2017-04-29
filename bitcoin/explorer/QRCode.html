@@ -1,55 +1,81 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Cross-Browser QRCode generator for Javascript</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>	
+		<link rel="stylesheet" href="../../css/style.css" />
+		<link rel="shortcut" href="../../favicon.ico">
+		<title> Gérénateur de QRCode </title>		
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
 		<script type="text/javascript" src="qrcode.js"></script>
 	</head>
+	
 <body>
-	
-	<div id="qrcode"></div>
-	<script type="text/javascript">
-	var qrcode = new QRCode(document.getElementById("qrcode"), {
-		text: "http://jindo.dev.naver.com/collie",
-		width: 128,
-		height: 128,
-		colorDark : "#000000",
-		colorLight : "#ffffff",
-		correctLevel : QRCode.CorrectLevel.H
-	});
-	</script>
-	
-	
-	<input id="text" type="text" value="http://jindo.dev.naver.com/collie" style="width:80%" /><br />
-	<div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		      <div>
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Electif IF</a>
+				</div>
 
-	<script type="text/javascript">
-	var qrcode = new QRCode(document.getElementById("qrcode"), {
-		width : 100,
-		height : 100
-	});
-	function makeCode () {		
-		var elText = document.getElementById("text");
+				<div id="navbar" class="collapse navbar-collapse">
+				  <ul class="nav navbar-nav">
+				      <li><a href="https://LucBRT.github.io/">Accueil</a></li>
+				      <li><a href="#about">Bitcoin</a></li>
+				      <li><a href="https://LucBRT.github.io/bitcoin/explorer/index.html">Formulaire</a></li>
+				      <li><a class="active" href="https://LucBRT.github.io/bitcoin/explorer/QRCode.html">Générateur de QR Code</a></li>
 
-		if (!elText.value) {
-			alert("Input a text");
-			elText.focus();
-			return;
-		}
+				</ul>
+				</div>  
+		      </div>
+    	</nav>
+	
+	<div class=interieur>
+      			<h1>Générateur de QRCode</h1>
+			    	        <div id="qrcode"></div>
+					<script type="text/javascript">
+					var qrcode = new QRCode(document.getElementById("qrcode"), {
+						text: "http://jindo.dev.naver.com/collie",
+						width: 128,
+						height: 128,
+						colorDark : "#000000",
+						colorLight : "#ffffff",
+						correctLevel : QRCode.CorrectLevel.H
+					});
+					</script>
 
-		qrcode.makeCode(elText.value);
-	}
-	makeCode();
-	$("#text").
-		on("blur", function () {
-			makeCode();
-		}).
-		on("keydown", function (e) {
-			if (e.keyCode == 13) {
-				makeCode();
-			}
-		});
-	</script>
+
+					<input id="text" type="text" value="http://jindo.dev.naver.com/collie" style="width:80%" /><br />
+					<div id="qrcode" style="width:100px; height:100px; margin-top:15px;"></div>
+
+					<script type="text/javascript">
+					var qrcode = new QRCode(document.getElementById("qrcode"), {
+						width : 100,
+						height : 100
+					});
+					function makeCode () {		
+						var elText = document.getElementById("text");
+
+						if (!elText.value) {
+							alert("Input a text");
+							elText.focus();
+							return;
+						}
+
+						qrcode.makeCode(elText.value);
+					}
+					makeCode();
+					$("#text").
+						on("blur", function () {
+							makeCode();
+						}).
+						on("keydown", function (e) {
+							if (e.keyCode == 13) {
+								makeCode();
+							}
+						});
+					</script>
+		</div>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </body>
 </html>
